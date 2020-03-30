@@ -14,13 +14,7 @@ Our view is going to be a `UserControl`.
 
 We're going to create the `UserControl` from a template. Follow the instructions below:
 
-<ul class="nav nav-tabs platform-choice">
-	<li class="active"><a  href="#vs" data-toggle="tab">Visual Studio</a></li>
-	<li><a href="#netcore" data-toggle="tab">.NET Core</a></li>
-</ul>
-
-<div class="tab-content platform-choice clearfix">
-  <div class="tab-pane active" id="vs">
+## Visual Studio
 
 1. Right click your project's `Views` folder in Solution Explorer
 2. Select the `Add -> New Item` menu item
@@ -29,16 +23,16 @@ We're going to create the `UserControl` from a template. Follow the instructions
 5. Enter `TodoListView` as the "Name"
 6. Click the "Add" button
 
-  </div>
-  <div class="tab-pane" id="netcore">
-    Run this command from the root directory of your project (the directory that contains
-    "Program.cs" and the "Views" directory):
+## .NET Core CLI
+
+Run this command from the root directory of your project (the directory that contains
+"Program.cs" and the "Views" directory):
 
 ```powershell
 dotnet new avalonia.usercontrol -o Views -n TodoListView  --namespace Todo.Views
 ```
-  </div>
-</div>
+
+# The UserControl
 
 The template should create a XAML file with the following contents in the `Views` directory,
 alongside `MainWindow.xaml`.
