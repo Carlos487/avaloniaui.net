@@ -11,7 +11,7 @@ many UI framworks.
   or [Microsoft XAML documentation for UWP](https://docs.microsoft.com/en-us/windows/uwp/xaml-platform/xaml-overview) -
   many of the concepts are the same between frameworks.
 
-# Format of an Avalonia XAML File
+## Format of an Avalonia XAML File
 
 A basic Avalonia XAML file looks like this:
 
@@ -34,7 +34,7 @@ There are three parts to this file:
 - `x:Class="AvaloniaApplication1.MainWindow"` - this tells the XAML compiler where to find
   the associated class for this file, defined in [code-behind](/docs/quickstart/codebehind)
 
-# Declaring Controls
+## Declaring Controls
 
 Controls are added to the XAML by adding an XML element with the control's class name. For example
 to add a button as the child of the window you would write:
@@ -48,7 +48,7 @@ to add a button as the child of the window you would write:
 
 See the [controls documentation](/docs/controls) for a list of the controls included with Avalonia.
 
-# Setting Properties
+## Setting Properties
 
 You can set a property of a control by adding an XML attribute to an element. For example to create
 a button with a blue background you could write:
@@ -63,7 +63,7 @@ a button with a blue background you could write:
 You can also use _property element syntax_ for setting properties. For more information see the
 [WPF documentation](https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/xaml-overview-wpf#property-element-syntax).
 
-# Content Properties
+## Content Properties
 
 You may notice that the button above has its "Hello World!" content placed directly inside the XML
 element. This could also be written as a property using:
@@ -79,7 +79,7 @@ This is because [`Button.Content`](api/Avalonia.Controls/ContentControl/4B02A756
 _`[Content]` Property_ which means that any content placed inside its XML tag will be assigned to this
 property.
 
-# Binding
+## Binding
 
 You can bind a property using the `{Binding}` markup extension:
 
@@ -92,7 +92,7 @@ You can bind a property using the `{Binding}` markup extension:
 
 For more information, see the [binding documentation](/docs/binding).
 
-# Code-behind
+## Code-behind
 
 Many XAML files also have an associated _code-behind_ file which usually has the extension
 `.xaml.cs`. For more information see the [codebehind documentation](/docs/quickstart/codebehind).

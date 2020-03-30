@@ -23,7 +23,7 @@ You can read our (unfortunately very brief atm) [getting started instructions he
 Here's the big features in this release - a lot of improvements have been made
 everywhere but these are the big hitters:
 
-# List Virtualization
+## List Virtualization
 
 Avalonia now has item virtualization, which means that working with large lists
 is now feasible. Previously, when binding a `ListBox` to a list of e.g. 10,000
@@ -35,13 +35,13 @@ You don't need to do anything to enable this behavior - it's enabled by
 default - but you can turn it off by setting `VirtualizationMode="None"` on the
 `ListBox`.
 
-# Per-monitor DPI Support on Windows
+## Per-monitor DPI Support on Windows
 
 Avalonia applications on Windows will now scale their contents to the DPI of the
 monitor that they're being displayed on and the window will automatically change
 DPI when it's dragged to another monitor with different DPI settings.
 
-# Style Resources
+## Style Resources
 
 You can now include resources such as brushes and colors in styles so that they
 don't need to be hardcoded each time they're used:
@@ -59,14 +59,14 @@ This differs somewhat from the standard XAML `Resources` collection which is
 defined at a control level rather than a style level. To read about the
 reasoning behind this, see [this issue comment](https://github.com/AvaloniaUI/Avalonia/issues/462#issuecomment-191849723).
 
-# Skia backend
+## Skia backend
 
 Work is underway to add a Skia backend using [Skia#](https://github.com/mono/SkiaSharp)
 which will hopefully replace our Cairo backend for non-Windows platforms.
 [Skia](https://skia.org/) is a modern 2D graphics API that better fits
 Avalonia's drawing model than Cairo and also works on mobile platforms.
 
-# AppBuilder
+## AppBuilder
 
 The `Application` was previously semi-platform-specific in that if you wanted to
 have an application that ran on Desktop, Android and iOS you would need a
@@ -97,7 +97,7 @@ AppBuilder.Configure<App>()
     .Start<MainWindow>();
 ```
 
-# Data Validation
+## Data Validation
 
 [Jeremy Koritzinsky](https://github.com/jkoritzinsky) implemented support for
 data validation on bindings. Currently exceptions and `INotifyDataErrorInfo` are
@@ -109,7 +109,7 @@ the binding's `EnableValidation` property to `true`:
 <TextBox Text="{Binding Path=Value, EnableValidation=True}"/>
 ```
 
-# Window Icons
+## Window Icons
 
 [Jeremy Koritzinsky](https://github.com/jkoritzinsky) also implemented support
 for window icons. The following example loads the icon for a window from a
@@ -120,7 +120,7 @@ called `test_icon.ico`.
 <Window Icon="resm:test_icon.ico"/>
 ```
 
-# System Dialogs
+## System Dialogs
 
 [Nikita Tsukanov](https://github.com/kekekeks) and
 [Dan Walmsley](https://github.com/danwalmsley)  implemented system Dialogs
@@ -131,7 +131,7 @@ var dialog = new OpenFileDialog();
 var fileNames = await dialog.ShowAsync();
 ```
 
-# Designer Improvements
+## Designer Improvements
 
 [Abdelkarim Sellamna](https://github.com/abdelkarim) started a nice clean
 up of our designer UI, bringing a familiar look and feel:
@@ -141,14 +141,14 @@ up of our designer UI, bringing a familiar look and feel:
 In addition, [Nikita Tsukanov](https://github.com/kekekeks) implemented support
 for editing XAML files in dlls and PCLs.
 
-# XAML Behaviors
+## XAML Behaviors
 
 [Wiesław Šoltés](https://github.com/wieslawsoltes) has ported [UWP's behaviors
 to Avalonia](https://github.com/XamlBehaviors/XamlBehaviors). XAML Behaviors are
 an easy-to-use means of adding common and reusable interactivity to your
 Avalonia applications with minimal code.
 
-# Thanks for Reading!
+## Thanks for Reading!
 
 Please file any bugs you find on [our issue tracker](https://github.com/AvaloniaUI/Avalonia/issues) and come join us in our
 [Gitter room](https://gitter.im/AvaloniaUI/Avalonia).

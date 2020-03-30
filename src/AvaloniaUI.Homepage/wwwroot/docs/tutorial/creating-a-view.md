@@ -10,11 +10,11 @@ data. In later steps we'll use the MVVM pattern to populate this view.
 
 Our view is going to be a `UserControl`.
 
-# Create the UserControl
+## Create the UserControl
 
 We're going to create the `UserControl` from a template. Follow the instructions below:
 
-## Visual Studio
+### Visual Studio
 
 1. Right click your project's `Views` folder in Solution Explorer
 2. Select the `Add -> New Item` menu item
@@ -23,7 +23,7 @@ We're going to create the `UserControl` from a template. Follow the instructions
 5. Enter `TodoListView` as the "Name"
 6. Click the "Add" button
 
-## .NET Core CLI
+### .NET Core CLI
 
 Run this command from the root directory of your project (the directory that contains
 "Program.cs" and the "Views" directory):
@@ -32,7 +32,7 @@ Run this command from the root directory of your project (the directory that con
 dotnet new avalonia.usercontrol -o Views -n TodoListView  --namespace Todo.Views
 ```
 
-# The UserControl
+## The UserControl
 
 The template should create a XAML file with the following contents in the `Views` directory,
 alongside `MainWindow.xaml`.
@@ -83,7 +83,7 @@ namespace Todo.Views
 We're not going to touch the code-behind file for a little while, but notice that the class is
 called `TodoListView` and it's located in the `Todo.Views` namespace.
 
-# Edit the UserControl
+## Edit the UserControl
 
 Edit the contents of `Views/TodoListView.xaml` to contain the following:
 
@@ -112,7 +112,7 @@ in the previewer after completing a build:
 
 ![Designer view](images/creating-a-view-todolistview.png)
 
-# What does it all mean?
+## What does it all mean?
 
 Lets take a look at the code we just entered line-by-line.
 
@@ -193,7 +193,7 @@ of the control.
 Last of all, we add two `CheckBox` controls to represent the TODO items. We're also giving the
 controls a margin to separate them a little bit visually.
 
-# Display the view in the Window
+## Display the view in the Window
 
 To see the view we've just created, we need to add it to the application's main window. Open the
 `Views/MainWindow.xaml` file and edit it to have the following content:
@@ -232,7 +232,7 @@ engine to find the control.
 Using the XML namespace we've just declared we now place the `TodoListView` control as the content
 of our `Window`.
 
-# Run the application
+## Run the application
 
 If you now run the application (by pressing `F5` in Visual Studio or executing `dotnet run` in .NET
 Core) you should see the application running in all its glory:

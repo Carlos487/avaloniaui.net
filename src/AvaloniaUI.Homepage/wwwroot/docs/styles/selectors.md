@@ -3,7 +3,7 @@ Title: Selectors
 Order: 20
 ---
 
-# OfType
+## OfType
 
 ```xml
 <Style Selector="Button">
@@ -24,7 +24,7 @@ This selector does not match derived types. For that, use the [`Is`](#is) select
   your control which inherits from `Button` to be styled as a `Button`, then you can implement the
   `IStyleable.StyleKey` property on your class to return `typeof(Button)`.
 
-# Name
+## Name
 
 ```xml
 <Style Selector="#myButton">
@@ -37,7 +37,7 @@ new Style(x => x.OfType<Button>().Name("myButton"));
 
 Selects a control by its [`Name`](/api/Avalonia.Controls/Control/580076CD) property.
 
-# Class
+## Class
 
 ```xml
 <Style Selector=".large">
@@ -56,7 +56,7 @@ Selects a control with the specified style classes. Multiple classes should be s
 `.` character, or a `:` character in the case of pseudoclasses. If multiple classes are specified
 then the control must have all of the requested classes present in order to match.
 
-# Is
+## Is
 
 ```xml
 <Style Selector=":is(Button)">
@@ -71,7 +71,7 @@ This is very similar to the [`OfType`](#ofType) selector except it also matches 
 
 > Again, the type of an object is actually determined by looking at its IStyleable.StyleKey property.
 
-# Child
+## Child
 
 ```xml
 <Style Selector="StackPanel > Button">
@@ -84,7 +84,7 @@ A child selector is defined by separating two selectors with a `>` character. Th
 _direct children in the logical tree_, so in the example above the selector will match any `Button`
 that is a direct logical child of a `StackPanel`.
 
-# Descendant
+## Descendant
 
 ```xml
 <Style Selector="StackPanel Button">
@@ -97,7 +97,7 @@ When two selectors are separated by a space, then the selector will match descen
 logical tree, so in this case the selector will match any `Button` that is a logical descendant
 of a `StackPanel`.
 
-# PropertyEquals
+## PropertyEquals
 
 ```xml
 <Style Selector="Button[IsDefault=true]">
@@ -108,7 +108,7 @@ new Style(x => x.OfType<Button>().PropertyEquals(Button.IsDefaultProperty, true)
 
 Matches any control which has the specified property set to the specified value.
 
-# Template
+## Template
 
 ```xml
 <Style Selector="Button /template/ ContentPresenter">
@@ -121,7 +121,7 @@ Matches a control in a control template. All other selectors listed here work on
 If you wish to select a control in a control template then you must use this selector. The example
 selects `ContentPresenter` controls in the templates of `Button`s.
 
-# Not
+## Not
 
 ```xml
 <Style Selector=":not(.h1)">

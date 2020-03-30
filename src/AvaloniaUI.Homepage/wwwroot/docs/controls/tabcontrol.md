@@ -35,7 +35,7 @@ To create this, we'll describe the entire control (TabControl) and each indivual
 </TabControl>
 ```
 
-### If you want to customize the look&feel of the TabControl
+## If you want to customize the look&feel of the TabControl
 
 Let's have a look at a customized `TabControl` :
 
@@ -88,5 +88,5 @@ The grey part is the `TabItem`... Yes, the `TabItem` includes the tab **AND** th
 </Window.Styles>
 ```
 
-# Source code
+## Source code
 [TabControl.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TabControl.cs)

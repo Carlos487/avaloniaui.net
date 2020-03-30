@@ -3,21 +3,21 @@ Title: CheckBox
 ---
 The `CheckBox` control is a [`ContentControl`](contentcontrol) which allows user to check an option. It is usually used to display a boolean option where selection is either *checked* or *unchecked*. But it also supports three state mode where selection is either *checked*, *indeterminate* or *unchecked*.
 
-# Common Properties
+## Common Properties
 
 |Property|Description|
 |--------|-----------|
 |`IsChecked`|Is `CheckBox` checked|
 |`IsThreeState`|Is `CheckBox` in three state mode|
 
-# Source code
+## Source code
 
 [CheckBox.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/CheckBox.cs)  
 [ToggleButton.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Primitives/ToggleButton.cs)
 
-# Examples
+## Examples
 
-## Basic checkbox
+### Basic checkbox
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -36,7 +36,7 @@ The `CheckBox` control is a [`ContentControl`](contentcontrol) which allows user
 produces following output with **Windows 10**  
 ![Basic checkbox](images/checkbox_basic.png)
 
-## Three state checkbox
+### Three state checkbox
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"

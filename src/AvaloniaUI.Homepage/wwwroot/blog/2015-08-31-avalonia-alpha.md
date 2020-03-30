@@ -22,7 +22,7 @@ there's an initial complement of controls. There's still a lot missing, and you
 where we've made it somewhat easy to have a play and experiment with the
 framework.
 
-# How do I try it out
+## How do I try it out
 
 The easiest way to try out Avalonia is to install the [Visual Studio Extension](https://visualstudiogallery.msdn.microsoft.com/87db356c-cec9-4a07-b7db-a4ed8a921ac9).
 
@@ -41,7 +41,7 @@ important part!
 There's also a Avalonia Window template in there, but no User Control template
 yet (in reality you just need to change `Window` to `UserControl`).
 
-# Multi-platform you say?
+## Multi-platform you say?
 
 Well, yes, that is the intention. However unfortunately as of the time of this
 first alpha, Avalonia is only shipping with a Windows backend. There *is* a
@@ -55,7 +55,7 @@ track the progress on Linux in the [issue on GitHub](https://github.com/grokys/A
 Even though it's not quite there yet, the reason it's a close as it is is due to
 the efforts of [ncarillo](https://github.com/ncarrillo) - thanks Nelson!
 
-# OmniXAML
+## OmniXAML
 
 Avalonia's XAML support has only just landed and its only thanks to the great
 [OmniXaml](https://github.com/SuperJMN/OmniXAML) project that it's at all

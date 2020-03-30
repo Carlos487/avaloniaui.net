@@ -37,7 +37,7 @@ bind to properties on this object:
 
 Will bind the `Button`'s `Content` to `Window.DataContext.ButtonCaption`.
 
-# Binding DataContext
+## Binding DataContext
 
 When binding `DataContext`, the `DataContext` of the parent control is used as the source of the binding:
 

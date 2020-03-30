@@ -16,18 +16,18 @@ You can get started by using the [Visual Studio plugin](https://visualstudiogall
 
 Here are the new features in Alpha 5:
 
-# .Net Core Support
+## .Net Core Support
 
 Support for .NET core has landed! There are now two sets of desktop application templates in our extension, .NET Framework and .NET Core (we hope the merge these in the future) and we've started working on templates for `dotnet` which you can find [here](https://github.com/AvaloniaUI/avalonia-dotnet-templates). Many of our libraries now target .NET standard, and more will do so in future.
 
-# GTK3 backend
+## GTK3 backend
 
 We are now using P/Invoke based GTK3 backend instead of GTK#. Two main issues with GTK# are incompatibility with .NET Core and the need of additional native libraries that have to be built for each Linux distro. As a bonus point we now have a proper support for smooth scrolling on linix/osx.
 
 On OSX it's now needed to install `gtk+3` package from `brew`. We are planning to create a native OSX backend, since with .NET Core 2.0 it's now possible to [run MonoMac-based applications on .NET Core](https://www.youtube.com/watch?v=edgosMqgcBc)
 
 
-# Updated Mobile Platform Integration
+## Updated Mobile Platform Integration
 
 We no longer pretend that desktop-like Window is a thing on mobile platforms (previously we had a singleton WindowImpl that mostly consisted of stubs). Instead we now provide an `AvaloniaView` class that derives from a native view and has `Content` property which can hold Avalonia controls. You can use this view in any way you want. We also provide `AvaloniaActivity` for Android and `AvaloniaWindow` (`UIWindow` with predefined associated `RootViewController`) for iOS for convenience purposes, both of which also have Content property.
 
@@ -60,21 +60,21 @@ public class MainActivity : AvaloniaActivity
     }
 }
 ```
-# Linux FrameBuffer Support
+## Linux FrameBuffer Support
 
 We now have initial support for running Avalonia directly over a [Linux framebuffer](https://github.com/AvaloniaUI/Avalonia/tree/master/src/Linux/Avalonia.LinuxFramebuffer).
 
-# Embedding Avalonia in WPF, WinForms and GTK
+## Embedding Avalonia in WPF, WinForms and GTK
 
 [@kekekeks](https://github.com/kekekeks) implemented embedding Avalonia in in WPF, WinForms and GTK applications. To see some examples of embedding Avalonia controls, check out the [the samples]().
 
-# Extensibility system
+## Extensibility system
 
 [@jkoritzinsky](https://github.com/jkoritzinsky) implemented an extensibility system for automatically initializing 3rd party libraries and for automatically loading the best windowing and rendering subsystems available for the current OS platform. This will allow for control creators to automatically register services and themes required by their controls, as well as allowing dynamic addition of new renderers and windowing systems.
 
 Take a look at the [pull request](https://github.com/AvaloniaUI/Avalonia/pull/707) for more details.
 
-# Stream Binding Operator
+## Stream Binding Operator
 
 Previously, when then binding system encountered an `IObservable<>` or a `Task` it automatically tried to subscribe to the observable or task and use the produced value as its value. However this [caused problems](https://github.com/AvaloniaUI/Avalonia/issues/711) when a user wanted to  actually bind to a property on a class that implements `IObservable`.
 
@@ -90,11 +90,11 @@ To allow both scenarios, we [added a '^' stream binding operator](https://github
 
 The stream binding operator is [pluggable](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Markup/Avalonia.Markup/Data/ExpressionObserver.cs#L47) which should allow for some interesting possibilities!
 
-# Bug Fixes
+## Bug Fixes
 
 There have been many bugfixes by many contributors in this release - thanks to [@danwalmsley](https://github.com/danwalmsley), [@jkoritzinsky](https://github.com/jkoritzinsky), [@kekekeks](https://github.com/kekekeks), [@mikel785](https://github.com/mikel785), [@OronDF343](https://github.com/OronDF343), [@robbieknuth](https://github.com/robbieknuth), [@tfreitasleal](https://github.com/tfreitasleal), [@wieslawsoltes](https://github.com/wieslawsoltes) and [@yusuf-gunaydin](https://github.com/yusuf-gunaydin) for your PRs! You can see the list of bugs/enhancements for this release in the [release milestone](https://github.com/AvaloniaUI/Avalonia/milestone/7?closed=1)
 
-# Thanks for Reading!
+## Thanks for Reading!
 
 Please file any bugs you find on [our issue tracker](https://github.com/AvaloniaUI/Avalonia/issues) and come join us in our
 [Gitter room](https://gitter.im/AvaloniaUI/Avalonia).

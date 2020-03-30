@@ -33,7 +33,7 @@ The text of the `MenuItem` is displayed by the `Header` property; the inner cont
 
 Separators are added by including a `Separator` control or a `MenuItem` with a header of `"-"`.
 
-# Menu Commands
+## Menu Commands
 
 Like `Button`, commands can be [bound](/docs/binding/binding-to-commands) to `MenuItem`s. The
 command will be executed when the menu item is clicked or selected with the keyboard:
@@ -49,7 +49,7 @@ command will be executed when the menu item is clicked or selected with the keyb
 > See the [Binding to Commands](/docs/binding/binding-to-commands) section for more information
   on binding to commands.
 
-# Menu Icons
+## Menu Icons
 
 A menu icon can be displayed by placing an `Image` in the `Icon` property:
 
@@ -61,7 +61,7 @@ A menu icon can be displayed by placing an `Image` in the `Icon` property:
     </MenuItem>
 ```
 
-# Checkboxes
+## Checkboxes
 
 Similarly, a `CheckBox` can be displayed in the `Icon` property to make the `MenuItem` checkable:
 
@@ -77,7 +77,7 @@ Similarly, a `CheckBox` can be displayed in the `Icon` property to make the `Men
     </MenuItem>
 ```
 
-# Dynamically Creating Menus
+## Dynamically Creating Menus
 
 Menus can also be dynamically created using bindings and 
 [`DataTemplate`s](/docs/templates/datatemplate). To do this, you will usually  create a view model
@@ -208,6 +208,6 @@ Finally assign the bindings to the view model in a `Style` within the menu:
 </Menu>
 ```
 
-# Source code
+## Source code
 [Menu.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Menu.cs)
 

@@ -7,7 +7,7 @@ When we originally created the `TodoListView` we added an "Add an item" button. 
 make that button do something. When the button is clicked we want to replace the list of items with
 a new view which will allow the user to enter the description of a new item.
 
-# Create the view
+## Create the view
 
 We start by creating the view
 (see [here](/docs/tutorial/creating-a-view#create-the-usercontrol)
@@ -45,7 +45,7 @@ text. We set three properties on it:
   view model
 - `Watermark` causes a placeholder to be displayed when the `TextBox` is empty
 
-# Create the view model
+## Create the view model
 
 Our view model is going to start out _extremely_ simple. We're just going to provide the
 `Description` property that the `TextBox` is bound to for starters. We'll add to this as we go
@@ -64,7 +64,7 @@ namespace Todo.ViewModels
 }
 ```
 
-# Swap out the list view model
+## Swap out the list view model
 
 When we click the "Add an item" button, we want to stop showing the `TodoListView` in the window
 and show the `AddItemView`. We can alter the `MainWindowViewModel` to let us do this:
@@ -182,7 +182,7 @@ a method. This is a convenience feature of Avalonia which means that you don't h
 `ICommand` for simple commands that are always enabled.
 :::
 
-# Run the application
+## Run the application
 
 If you now run the application and click the "Add an item" button you should see the new view appear.
 

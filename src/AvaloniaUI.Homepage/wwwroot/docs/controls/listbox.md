@@ -10,7 +10,7 @@ often be bound to a collection on the control's `DataContext`:
 <ListBox Items="{Binding MyItems}"/>
 ```
 
-# Customizing the item display
+## Customizing the item display
 
 You can customize how an item is displayed by specifying an `ItemTemplate`. For example to display
 each item inside a red border with rounded corners:
@@ -27,7 +27,7 @@ each item inside a red border with rounded corners:
 </ListBox>
 ```
 
-# Preventing Horizontal Scrolling
+## Preventing Horizontal Scrolling
 
 By default if an item is too wide to display in the `ListBox`, a horizontal scrollbar will be
 displayed. If instead you want items to be constrained to the width of the `ListBox` (for example
@@ -47,5 +47,5 @@ if you want wrapping text in the items) you can disable the horizontal scrollbar
 
 ```
 
-# Source code
+## Source code
 [ListBox.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ListBox.cs)

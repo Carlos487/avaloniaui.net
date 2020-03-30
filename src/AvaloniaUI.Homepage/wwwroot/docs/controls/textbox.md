@@ -3,12 +3,12 @@ Title: Textbox
 ---
 The `TextBox` control is an editable text field where a user can input text.
 
-# Source code
+## Source code
 [TextBox.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TextBox.cs)
 
-# Examples
+## Examples
 
-## Basic one line TextBox
+### Basic one line TextBox
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -26,7 +26,7 @@ The `TextBox` control is an editable text field where a user can input text.
 produces the following output in **Windows 10**  
 ![Basic TextBox](images/textbox_basic.png)
 
-## Password input TextBox
+### Password input TextBox
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -44,7 +44,7 @@ produces the following output in **Windows 10**
 produces the following output in **Windows 10** when text is input  
 ![Password TextBox](images/textbox_password.png)
 
-## TextBox with watermark
+### TextBox with watermark
 
 Avalonia can show a "watermark" in a `TextBox`, which is a piece of text that is displayed when the `TextBox` is empty (in HTML5 this is called a *placeholder*)
 
@@ -64,7 +64,7 @@ Avalonia can show a "watermark" in a `TextBox`, which is a piece of text that is
 produces the following output in **Windows 10**   
 ![Watermark TextBox](images/textbox_watermark.png)
 
-## Multiline TextBox
+### Multiline TextBox
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"

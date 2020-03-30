@@ -7,7 +7,7 @@ If you are creating a control, you will want to define properties on your contro
 by defining `AvaloniaProperty`s for your control. Avalonia properties consist of two parts: the
 property definition and the CLR getter/setter for the property.
 
-# Registering Styled Properties
+## Registering Styled Properties
 
 Unless you have a good reason not to, you should define properties on your control as _styled
 properties_. Styled properties ensure that your property will work correctly with Avalonia's
@@ -46,7 +46,7 @@ or throws an exception for an invalid value.
 
 > A styled property is analogous to a `DependencyProperty` in other XAML frameworks.
 
-# Using a `StyledProperty` on Another Class
+## Using a `StyledProperty` on Another Class
 
 Sometimes the property you want to add to your control already exists on another
 control, `Background` being a good example. To register a property defined on
@@ -67,7 +67,7 @@ another control, you call `StyledProperty.AddOwner`:
 > Note: Unlike WPF/UWP, a property must be registered on a class otherwise it cannot
   be set on an object of that class. This may change in future, however.
 
-# Readonly Properties
+## Readonly Properties
 
 To create a readonly property you use the `AvaloniaProperty.RegisterDirect`
 method. Here is how `Visual` registers the readonly `Bounds` property:
@@ -92,7 +92,7 @@ registering the property, a getter is passed which is used to access the
 property value through `GetValue` and then `SetAndRaise` is used to notify
 listeners to changes to the property.
 
-# Attached Properties
+## Attached Properties
 
 Attached properties are defined almost identically to styled properties except
 that they are registered using the `RegisterAttached` method and their accessors
@@ -115,7 +115,7 @@ Here's how `Grid` defines its `Grid.Column` attached property:
     }
 ```
 
-# Direct AvaloniaProperties
+## Direct AvaloniaProperties
 
 As its name suggests, `RegisterDirect` isn't just used for registering readonly
 properties. You can also pass a *setter* to `RegisterDirect` to expose a
@@ -184,7 +184,7 @@ on the control, you must also add a field for the property:
     }
 ```
 
-# When to use a Direct vs a Styled Property
+## When to use a Direct vs a Styled Property
 
 In general you should declare your properties as styled properties. However, direct properties have
 advantages and disadvantages:

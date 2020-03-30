@@ -6,7 +6,7 @@ Order: 40
 Now that we've got the view models set up, we need to make our views use these view models. We
 do this by making use of Avalonia's [data binding](/docs/binding) feature.
 
-# Update `MainWindow`
+## Update MainWindow
 
 We're exposing the list in `MainWindowViewModel.List` so let's use that property to display the
 list in `MainWindow.xaml`.
@@ -54,7 +54,7 @@ Is _exactly_ the same as writing:
 ```
 :::
 
-# Update `TodoListView`
+## Update TodoListView
 
 Now we need to make `TodoListView` get the list of TODO items from the view model:
 
@@ -109,7 +109,7 @@ before to space the items out a little:
 </ItemsControl.ItemTemplate>
 ```
 
-# Run the application
+## Run the application
 
 If you now run the application you will see the items in the (fake) database displayed.
 

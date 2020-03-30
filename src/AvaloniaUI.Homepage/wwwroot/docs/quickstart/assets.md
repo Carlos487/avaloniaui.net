@@ -7,7 +7,7 @@ Many applications need to include assets such as bitmaps and
 [resource dictionaries](/docs/styles/resources) in their executable and refer to these assets from 
 XAML.
 
-# Including assets
+## Including assets
 
 Assets can be included in an application by using the `<AvaloniaResource>` item in your project
 file. The MVVM Application template by default includes all files in the `Assets` directory as an
@@ -29,7 +29,7 @@ but because the term "resource" conflicts with [XAML resources](/docs/styles/res
 refer to them as "assets" throughout.
 :::
 
-# Referencing assets
+## Referencing assets
 
 Assets can be referenced in XAML by specifying their relative path:
 
@@ -53,7 +53,7 @@ would use:
 <Image Source="avares://MyAssembly/Assets/icon.png"/>
 ```
 
-# Referencing manifest resources
+## Referencing manifest resources
 
 Assets can also be included in .NET applications by using the `<EmbeddedResource>` MSBuild item
 which causes the file to be included in the assembly as a 
@@ -76,7 +76,7 @@ and the filename - all separated with periods. If Avalonia is unable to find a m
 check the resource name using 
 [`Assembly.GetManifestResourceNames`](https://docs.microsoft.com/en-us/dotnet/api/system.reflection.assembly.getmanifestresourcenames).
 
-# Loading assets from code
+## Loading assets from code
 
 Assets can be loaded from code using the `IAssetLoader` interface:
 

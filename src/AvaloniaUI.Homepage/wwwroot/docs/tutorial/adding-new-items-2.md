@@ -6,7 +6,7 @@ Order: 70
 Now we have the "Add new item" view appearing we need to make it work. In particular we need to
 enable/disable the OK button depending on whether the user has typed anything in the `Description`.
 
-# Implement the OK and Cancel commands
+## Implement the OK and Cancel commands
 
 In the last section we bound a `Button.Command` to a method on the view model, but if we want to be
 able to control the enabled state of the button we need to bind to an
@@ -101,7 +101,7 @@ Cancel = ReactiveCommand.Create(() => { });
 The cancel command is always enabled so we don't pass an observable to control its state, we just
 pass an "execute" lambda which in this case does nothing.
 
-# Bind the OK and Cancel buttons
+## Bind the OK and Cancel buttons
 
 We can now bind the OK and Cancel buttons in the view to the `Ok` and `Cancel` commands we just
 created on the view model:
@@ -130,7 +130,7 @@ Views/AddItemView.xaml
 If you run the application and go to the "Add Item" view you should now see that the OK button is
 only enabled when text has been entered in the description `TextBox`.
 
-# Handle the OK and Cancel button
+## Handle the OK and Cancel button
 
 We now need to react to the OK or Cancel buttons being pressed and re-show the list. If OK was
 pressed we also need to add the new item to the list. We'll implement this functionality in
@@ -239,6 +239,6 @@ Finally we subscribe to the result of the observable sequence. If the command re
 being produced (i.e. OK was clicked) then add this model to the list. We then set `Content` back to
 `List` in order to display the list in the window and hide the "AddItemView".
 
-# Run the application
+## Run the application
 
 ![The running application](images/adding-new-items-2-run.gif)

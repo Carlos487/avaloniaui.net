@@ -4,7 +4,7 @@ Order: 10
 ---
 For the [WhenActivated](https://reactiveui.net/docs/handbook/when-activated/) ReactiveUI feature to work, you need to use custom base classes from the `Avalonia.ReactiveUI` package, such as `ReactiveWindow<TViewModel>` or `ReactiveUserControl<TViewModel>`. Of course, you can also implement the `IViewFor<TViewModel>` interface by hand in your class, but make sure you store the `ViewModel` in an `AvaloniaProperty`.
 
-# Activation Example
+## Activation Example
 
 **ViewModel.cs**
 
@@ -58,7 +58,7 @@ public class View : ReactiveWindow<ViewModel>
 }
 ```
 
-# Code-Behind ReactiveUI Bindings
+## Code-Behind ReactiveUI Bindings
 
 The Avalonia XAML engine doesn't generate strongly typed `x:Name` references to controls. The only way to use [code-behind ReactiveUI bindings](https://reactiveui.net/docs/handbook/data-binding/) for now is to use the `FindControl` method that will find a control by the name specified in XAML, or to use `{Binding Path}` syntax. 
 

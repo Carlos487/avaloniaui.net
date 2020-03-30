@@ -7,7 +7,7 @@ Often, styles and controls will need to share resources such as (but not limited
 colors. You can put such resources in the `Resources` dictionary which is available on every style
 and control and then refer to these resources elsewhere.
 
-# Declaring resources
+## Declaring resources
 
 If a resource is to be available to your entire application, you can define it in `App.xaml`:
 
@@ -58,7 +58,7 @@ You can also declare resources on styles:
 </Style>
 ```
 
-# Referencing resources
+## Referencing resources
 
 You can references resources from controls using the `{DynamicResource}` markup extensions, e.g.:
 
@@ -77,7 +77,7 @@ respect to `DynamicResource`:
 In return, `StaticResource` doesn't need to add an event handler to listen for changes in resources
 which means it uses slightly less memory.
 
-# Overriding resources
+## Overriding resources
 
 Resources are resolved by walking up the logical tree from the point of the `DynamicResource` or
 `StaticResource` until a resource with the requested key is found. This means that resources can be
@@ -106,7 +106,7 @@ Resources are resolved by walking up the logical tree from the point of the `Dyn
 Here's the `Border`'s background will be `Orange` because its parent `StackPanel` has "overridden"
 the `Warning` resource from the `Yellow` declared on the `UserControl`.
 
-# Merged resource dictionaries
+## Merged resource dictionaries
 
 The `Resources` property on each control and style is of type `ResourceDictionary`. Resource
 dictionaries can also include other resource dictionaries by making use of the `MergedDictionaries`
@@ -126,7 +126,7 @@ property. To include a resource dictionary in another you can use the `ResourceI
 Where `AnotherResourceDictionary` is a XAML file with a root of `ResourceDictionary` and is
 included as an asset in the application.
 
-# Resource resolution
+## Resource resolution
 
 As mentioned above, resources are resolved by walking up the logical tree from the point of the
 `DynamicResource` or `StaticResource` until a resource with the requested key is found. However
@@ -168,7 +168,7 @@ Window
      |- Border
 ```
 
-# Theme resources
+## Theme resources
 
 Themes will usually define brushes, colors and other settings as resources. By changing these
 resources one can e.g. switch from a dark to a light theme. The resources defined will usually be

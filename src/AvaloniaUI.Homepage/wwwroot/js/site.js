@@ -2,6 +2,7 @@ $(function () {
     'use strict';
 
     hljs.initHighlightingOnLoad();
+    anchors.add();
 
     var navbar = $('#navbar');
     var scrollListeners = $('.scroll-listener');

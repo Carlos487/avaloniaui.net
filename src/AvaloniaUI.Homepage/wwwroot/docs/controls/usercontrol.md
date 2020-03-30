@@ -12,11 +12,11 @@ instead a new subclass of the `UserControl` class is usually created for each "v
 an application. For information on how to create new `UserControl` classes from templates see the
 [quickstart](/docs/quickstart/usercontrol).
 
-# Common Properties
+## Common Properties
 
 |Property|Description|
 |--------|-----------|
 |`Content`|The content to display in the control|
 
-# Source code
+## Source code
 [UserControl.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/UserControl.cs)

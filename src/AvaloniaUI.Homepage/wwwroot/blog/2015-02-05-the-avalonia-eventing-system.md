@@ -36,7 +36,7 @@ completely, however they are somewhat hidden in that there are no longer any `Pr
 
 So lets have a look at how things work in Avalonia.
 
-# Direct Events, Bubbling Events and Class Handers
+## Direct Events, Bubbling Events and Class Handers
 
 Direct events (such as `Button.Click`) and bubbling events (such as `KeyDown`) are still available
 in the usual manner - there's generally a standard event exposed on the class (i.e.
@@ -79,7 +79,7 @@ virtual void OnMyEvent(RoutedEventArgs e)
 Much nicer! You can pass a RoutingStrategy to that call to AddClassHandler if you want to handle
 tunneling events: by default it will handle direct and bubbling events.
 
-# Tunnelling Events
+## Tunnelling Events
 
 As mentioned earlier there are no longer any `Preview*` tunneling events exposed on Avalonia
 controls. That's not to say you couldn't add some to your own controls, but as they're used by a
@@ -93,7 +93,7 @@ this.topLevel.AddHandler(MyControl.MyEvent, MyHandler, RoutingStrategies.Tunnel)
 The AddHandler method returns an IDisposable which you can use to end the subscription, or you can
 call `Interactive.RemoveHandler`.
 
-# Registering Events
+## Registering Events
 
 Events are registered more or less the same as they are in WPF, but instead of registering a pair
 of `RoutedEvent`s when you want both a bubbling and tunneling event, you only have to register one.
@@ -106,7 +106,7 @@ public static readonly RoutedEvent<PointerPressEventArgs> PointerPressedEvent =
     RoutingStrategies.Tunnel | RoutingStrategies.Bubble);
 ```
 
-# Raising Events
+## Raising Events
 
 Events are raised using the `Interactive.RaiseEvent` method:
 
@@ -119,7 +119,7 @@ RoutedEventArgs click = new RoutedEventArgs
 this.RaiseEvent(click);
 ```
 
-# Marking Events Handled
+## Marking Events Handled
 
 As in WPF, you can mark an event handled to stop its propagation by setting the
 `RoutedEventArgs.Handled` property to `true`. You should do this if you have "acted" on the event,
@@ -133,7 +133,7 @@ void MyHandler(object sender, RoutedEventArgs e)
 ```
 
 
-# Advanced Usage
+## Advanced Usage
 
 So what if you want to also handle events that have been marked handled? You just need to pass
 an extra argument to AddHandler the same as you would in WPF:

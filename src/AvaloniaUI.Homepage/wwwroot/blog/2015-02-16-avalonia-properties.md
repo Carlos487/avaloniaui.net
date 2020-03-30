@@ -13,7 +13,7 @@ This article refers to a historical version of Avalonia and as such may not be u
 In this post I'm going to explore [Avalonia](https://github.com/grokys/Avalonia/)'s version of the
 XAML frameworks' `DependencyProperty` - `AvaloniaProperty`.
 
-# Avalonia Properties #
+## Avalonia Properties #
 
 AvaloniaProperty is the equivalent of WPF's DependencyProperty. Dependency/Avalonia properties give
 you a number of important features over simple .NET properties with `INotifyPropertyChanged`:
@@ -32,7 +32,7 @@ unless it differs from the default value.
 * **Binding Priorities**. Bindings may have a priority, so that values that come from the styling
 system can be overridden by values that are set locally.
 
-# Declaring a Avalonia Property #
+## Declaring a Avalonia Property #
 
 Declaring a `DependencyProperty` in WPF looks something like this:
 
@@ -76,7 +76,7 @@ write `typeof()` twice.
 Like `DependencyProperty`s in XAML, avalonia properties need to be defined on a class that inherits
 from the `AvaloniaObject` class.
 
-# Adding a Avalonia Property to Another Type #
+## Adding a Avalonia Property to Another Type #
 
 Just like in WPF, you can share avalonia properties between unrelated controls by calling
 `AvaloniaProperty.AddOwner':
@@ -86,7 +86,7 @@ public static readonly AvaloniaProperty<int> FooProperty =
     RegisteringControl.FooProperty.AddOwner<AnotherControl>();
 ```
 
-# Property Value Inheritance #
+## Property Value Inheritance #
 
 Here we declare an inherited integer property called "Foo":
 
@@ -104,7 +104,7 @@ Note, `AvaloniaObject` is defined at a lower level than the concept of "parent c
 This is automatically set by `Visual` (which inherits from `AvaloniaObject`) so you shouldn't usually
 have to worry about it.
 
-# Attached Properties
+## Attached Properties
 
 Attached properties are essentially the same as attached dependency properties in WPF. They are
 defined by calling `AvaloniaProperty.RegisterAttached`:
@@ -114,7 +114,7 @@ public static readonly AvaloniaProperty<int> ColumnProperty =
     AvaloniaProperty.RegisterAttached<Grid, Control, int>("Column");
 ```
 
-# Default Values
+## Default Values
 
 Default values are provided in the call to `AvaloniaProperty.Register` or `RegisterAttached`. If no
 default value is provided the default is taken to be `default(TValue)`.
@@ -131,7 +131,7 @@ FooProperty.OverrideDefaultValue(typeof(AnotherControl), 64);
 ```
 
 
-# Coercion
+## Coercion
 
 Coercion allows a control to react to changes in a property's value and make sure that the value is
 within a valid range. For example a "Percentage" property may only allow values between 0 and 100:
@@ -155,7 +155,7 @@ taken place you should check the type first.
 Currently coercion cannot be overridden for other classes, this is a limitation that may need to be
 lifted in future.
 
-# Binding #
+## Binding
 
 Binding in Avalonia uses Reactive Extensions' [IObservable](http://msdn.microsoft.com/library/dd990377.aspx). To bind an IObservable to a property, use the `Bind()` method:
 
@@ -171,7 +171,7 @@ To get the value of a property as an observable, call `GetObservable()`:
 var observable = control.GetObservable(Control.FooProperty);
 ```
 
-# Binding Priorities #
+## Binding Priorities
 
 A binding may also have a priority. The `BindingPriority` enumeration gives a set of common
 priorities:
@@ -190,7 +190,7 @@ public enum BindingPriority
 
 As you can see, lower integral values are considered to be of a higher priority. We'll explore how priorites work in [another post][d677c3e6].
 
-# Binding in Initialization Lists #
+## Binding in Initialization Lists
 
 One of the goals of avalonia was to make defining a UI in code almost as painless as using markup.
 To these ends, you can use initalization lists everywhere to give a XAML-like feel to your control

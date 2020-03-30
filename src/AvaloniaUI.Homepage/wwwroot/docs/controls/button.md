@@ -17,7 +17,7 @@ property. This command will be executed when the button is clicked. For more inf
 
 The Button control's full documentation can be found [here](/api/Avalonia.Controls/Button){target="_blank"}
 
-# Common Properties
+## Common Properties
 
 |Property|Description|
 |--------|-----------|
@@ -28,18 +28,18 @@ The Button control's full documentation can be found [here](/api/Avalonia.Contro
 |`IsDefault`|When set, pressing the enter key clicks the button even if not focused|
 |`IsPressed`|Set when the button is depressed|
 
-# Pseudoclasses
+## Pseudoclasses
 
 |Pseudoclass|Description|
 |-----------|-----------|
 |`:pressed`|Set when the button is depressed|
 
-# Source code
+## Source code
 [Button.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Button.cs)
 
-# Examples
+## Examples
 
- ## Basic button
+### Basic button
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -56,7 +56,7 @@ The Button control's full documentation can be found [here](/api/Avalonia.Contro
 produces following output with **Windows 10**  
 ![Basic button](images/button_basic.png)
 
- ## Colored button
+### Colored button
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -73,7 +73,7 @@ produces following output with **Windows 10**
 produces following output with **Windows 10**  
 ![Basic button](images/button_colors.png)
 
- ## Binding to a View Model Command
+### Binding to a View Model Command
  It is possible to bind a view model command to a simple method or with a ReactiveCommand. There are lots of advantages to the ReactiveCommand binding for all but the simplest user interfaces such as being able to pass an `IObservable<bool>` object in to have it dynamically calculate state.  Both methods are displayed below.  First the "simple" method binding:
  
 ```xml
@@ -108,7 +108,7 @@ public MainWindowViewModel()
 public ReactiveCommand OnClickCommand { get; }
 ```
 
- ## Binding to Events
+### Binding to Events
  
 ```xml
 <Window xmlns="https://github.com/avaloniaui"

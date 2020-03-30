@@ -4,12 +4,12 @@ Title: Grid
 The `Grid` control is a `Panel` control useful for organizing other controls in columns and rows. `ColumnDefinition` and `RowDefinition` properties are used to define absolute, relative, or proportional row and column geometries for the grid.
 Each control in the grid will be placed using the `Grid.Column` and `Grid.Row` additional properties. It is also possible to have controls that span multiple rows and/or columns by using the `ColumnSpan` and `RowSpan` properties.
 
-# Source code
+## Source code
 [Grid.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Grid.cs)
 
-# Examples
+## Examples
 
-## Grid Using Properties and Spanning Columns
+### Grid Using Properties and Spanning Columns
 Below is an example that shows:
 - Configuring the grid using the ColumnDefinition and GridDefinition properties directly
 - How to assign the cell for a given component
@@ -31,7 +31,7 @@ In the above example the "Auto" keyword is used to have the row or column geomet
 ![Grid Using Properties and Spanning Columns](images/grid_example.png)
 
 
-## Using Verbose Row/Column Definitions
+### Using Verbose Row/Column Definitions
 
 For more complex row and column definitions it's possible to explicitly use `Grid.ColumnDefinitions` and `Grid.RowDefinitions` XAML fields to provide access to these additional settings.  The below code produces is exactly the same except for the fact we set the minimum width on the second column to be 300.  
 
@@ -58,7 +58,7 @@ For more complex row and column definitions it's possible to explicitly use `Gri
 ![Using Verbose Row/Column Definitions](images/grid_example_verbose.png)
 
 
-## Common Properties
+### Common Properties
 
 |Property|Description|
 |--------|-----------|

@@ -42,7 +42,7 @@ namespace Example
 </Window>
 ```
 
-# CommandParameter
+## CommandParameter
 
 You can also pass a parameter to the command using the `CommandParameter` property:
 
@@ -90,7 +90,7 @@ For example to pass an `int` parameter you could use:
 
 Like any other property, `CommandParameter` can also be bound.
 
-# Binding To Methods
+## Binding To Methods
 
 Sometimes you just want to call a method when a button is clicked without the ceremony of creating
 a command. You can do that too!

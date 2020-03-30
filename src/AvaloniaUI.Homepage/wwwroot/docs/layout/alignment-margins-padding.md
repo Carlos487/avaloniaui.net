@@ -5,7 +5,7 @@ Order: 20
 
 An Avalonia control exposes several properties that are used to precisely position child elements. This topic discusses four of the most important properties: `HorizontalAlignment`, `Margin`, `Padding`, and `VerticalAlignment`. The effects of these properties are important to understand, because they provide the basis for controlling the position of elements in Avalonia applications.
 
-# Introduction to Element Positioning
+## Introduction to Element Positioning
 
 There are numerous ways to position elements using Avalonia. However, achieving ideal layout goes beyond simply choosing the right `Panel` element. Fine control of positioning requires an understanding of the `HorizontalAlignment`, `Margin`, `Padding`, and `VerticalAlignment` properties.
 
@@ -47,7 +47,7 @@ The following diagram provides a close-up view of the various positioning proper
 
  ![Positioning Properties](images/layout-margins-padding-alignment-graphic2.PNG)
 
-# Understanding Alignment Properties
+## Understanding Alignment Properties
 
 The `HorizontalAlignment` and `VerticalAlignment` properties describe how a child element should be positioned within a parent element's allocated layout space. By using these properties together, you can position child elements precisely. For example, child elements of a `DockPanel` can specify four different horizontal alignments: `Left`, `Right`, `Center`, or to `Stretch` to fill available space. Similar values are available for vertical positioning.
 
@@ -55,7 +55,7 @@ The `HorizontalAlignment` and `VerticalAlignment` properties describe how a chil
 Explicitly set `Height` and `Width` properties on an element take precedence over the `Stretch` property value. Attempting to set `Height`, `Width`, and a `HorizontalAlignment` value of `Stretch` results in the `Stretch` request being ignored.
 :::
 
-## HorizontalAlignment Property
+### HorizontalAlignment Property
 
 The `HorizontalAlignment` property declares the horizontal alignment characteristics to apply to child elements. The following table shows each of the possible values of the `HorizontalAlignment` property.
 
@@ -79,7 +79,7 @@ The preceding code yields a layout similar to the following image. The positioni
 
 ![HorizontalAlignment Sample](images/layout-horizontal-alignment-graphic.PNG)
 
-## VerticalAlignment Property
+### VerticalAlignment Property
 
 The `VerticalAlignment` property describes the vertical alignment characteristics to apply to child elements. The following table shows each of the possible values for the `VerticalAlignment` property.
 
@@ -119,7 +119,7 @@ The preceding code yields a layout similar to the following image. The positioni
 
 ![VerticalAlignment property sample](images/layout-vertical-alignment-graphic.PNG)
 
-# Understanding Margin Properties
+## Understanding Margin Properties
 
 The `Margin` property describes the distance between an element and its child or peers. `Margin` values can be uniform, by using syntax like `Margin="20"`. With this syntax, a uniform `Margin` of 20 device independent pixels would be applied to the element. `Margin` values can also take the form of four distinct values, each value describing a distinct margin to apply to the left, top, right, and bottom (in that order), like `Margin="0,10,5,25"`. Proper use of the `Margin` property enables very fine control of an element's rendering position and the rendering position of its neighbor elements and children.
 
@@ -143,7 +143,7 @@ In many instances, a uniform margin is not appropriate. In these cases, non-unif
 <Button Margin="0,10,0,10">Button 3</Button>
 ```
 
-## Understanding the Padding Property
+### Understanding the Padding Property
 
 Padding is similar to `Margin` in most respects. The Padding property is exposed on only on a few classes, primarily as a convenience: `Border`, `TemplatedControl`, and `TextBlock` are samples of classes that expose a Padding property. The `Padding` property enlarges the effective size of a child element by the specified `Thickness` value.
 
@@ -157,7 +157,7 @@ The following example shows how to apply `Padding` to a parent `Border` element.
         Padding="25">
 ```
 
-## Using Alignment, Margins, and Padding in an Application
+### Using Alignment, Margins, and Padding in an Application
 
 `HorizontalAlignment`, `Margin`, `Padding`, and `VerticalAlignment` provide the positioning control necessary to create a complex UI. You can use the effects of each property to change child-element positioning, enabling flexibility in creating dynamic applications and user experiences.
 

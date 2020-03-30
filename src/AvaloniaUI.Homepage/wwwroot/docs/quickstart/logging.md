@@ -19,7 +19,7 @@ By default, this logging setup will write log messages with a severity of
 `Warning` or higher to `System.Diagnostics.Debug`. The severity can be controlled
 by passing a `level` parameter to `LogToDebug()`.
 
-# Areas
+## Areas
 
 Each Avalonia log message has an "Area" that can be used to filter the log to
 include only the type of events that you are interested in. These are described
@@ -44,7 +44,7 @@ SerilogLogger.Initialize(new LoggerConfiguration()
     .CreateLogger());
 ```
 
-# Removing Serilog
+## Removing Serilog
 
 If you don't want a dependency on Serilog in your application, simply remove
 the reference to Avalonia.Logging.Serilog and the code that initializes it. If

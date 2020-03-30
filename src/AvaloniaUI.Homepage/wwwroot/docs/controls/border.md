@@ -21,7 +21,7 @@ An example of a border with a red background, 2 pixel black border, 3 pixel corn
 </Border>
 ```
 
-# Common Properties
+## Common Properties
 
 |Property|Description|
 |--------|-----------|
@@ -31,9 +31,9 @@ An example of a border with a red background, 2 pixel black border, 3 pixel corn
 |`Child`|The child control to decorate|
 |`CornerRadius`|The radius of the border's rounded corners|
 
-# Pseudoclasses
+## Pseudoclasses
 
 None
 
-# Source code
+## Source code
 [Border.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Border.cs)

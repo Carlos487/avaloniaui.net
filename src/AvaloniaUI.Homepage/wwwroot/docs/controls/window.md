@@ -8,7 +8,7 @@ You will not usually create instances of the `Window` class directly; instead th
 is usually sub-classed for each type of window to be shown by an application. For information on
 how to create new window classes from templates see the [quickstart](/docs/quickstart/window).
 
-# Common Properties
+## Common Properties
 
 |Property|Description|
 |--------|-----------|
@@ -17,10 +17,10 @@ how to create new window classes from templates see the [quickstart](/docs/quick
 |`SizeToContent`|Describes the window's auto-sizing behavior|
 |`WindowState`|The minimized/maximized state of the window|
 
-# Source code
+## Source code
 [Window.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Window.cs)
 
-# The main window
+## The main window
 
 The main window is the window passed to `Application.Run` in the `AppMain` method of your your
 `Program.cs` file:
@@ -34,7 +34,7 @@ private static void AppMain(Application app, string[] args)
 
 It can be retrieved at any time using the `Application.Current.MainWindow` property.
 
-# Show, hide and close a window
+## Show, hide and close a window
 
 You can show a window using the `Show` method:
 
@@ -65,7 +65,7 @@ window.Show();
 
 See also [Prevent a window from closing](#prevent-a-window-from-closing)
 
-# Show a window as a dialog
+## Show a window as a dialog
 
 You can show a window as a modal dialog by calling the `ShowDialog` method. `ShowDialog` requires
 an owner window to be passed:
@@ -108,7 +108,7 @@ var dialog = new MyDialog();
 var result = await dialog.ShowDialog<string>(Application.Current.MainWindow);
 ```
 
-# Prevent a window from closing
+## Prevent a window from closing
 
 A window can be prevented from closing by handling the `Closing` event and setting `e.Cancel = true`:
 

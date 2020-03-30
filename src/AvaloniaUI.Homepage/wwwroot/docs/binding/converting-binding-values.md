@@ -3,7 +3,7 @@ Title: Converting Binding Values
 Order: 30
 ---
 
-# Negating Values
+## Negating Values
 
 Often you will need to negate a value that you're binding to. A frequent use for this is to show
 or hide and control or to enable/disable it. You can negate a binding value by prepending a "bang"
@@ -39,7 +39,7 @@ hide a control when a collection is empty:
 </Panel>
 ```
 
-# Binding Converters
+## Binding Converters
 
 For more advanced conversions, Avalonia supports
 [`IValueConverter `](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.7.1)
@@ -63,7 +63,7 @@ Usage is identical to other XAML frameworks:
 </Window>
 ```
 
-# Built-in Converters
+## Built-in Converters
 
 Avalonia supplies a number of built-in value converters for common scenarios:
 
@@ -75,7 +75,7 @@ Avalonia supplies a number of built-in value converters for common scenarios:
 | `ObjectConverters.IsNotNull` | Returns `false` if the input is null |
 | `BoolConverters.And` | A multi-value converter that returns `true` if all inputs are true. |
 
-## Examples
+### Examples
 
 Hiding a `TextBlock` if the bound text is null or empty:
 
