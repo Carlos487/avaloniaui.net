@@ -25,6 +25,7 @@ namespace AvaloniaUI.Homepage.Pages.Docs
 
         public DocsArticle? Article { get; private set; }
         public List<DocsIndexItem>? Index { get; private set; }
+        public List<DocsIndexItem>? SectionIndex { get; private set; }
 
         public async Task<IActionResult> OnGet(string url)
         {
@@ -48,13 +49,17 @@ namespace AvaloniaUI.Homepage.Pages.Docs
             }
 
             Index = LoadIndex(docsPath, articlePath);
-
             Index.Insert(0, new DocsIndexItem
             {
                 Url = Url.Content("~/" + DocsRelativePath),
                 Title = "Introduction",
                 IsSelected = string.IsNullOrWhiteSpace(url),
             });
+
+            if (Path.GetFileName(articlePath).Equals("index.md", StringComparison.InvariantCultureIgnoreCase))
+            {
+                SectionIndex = LoadSectionIndex(Index);
+            }
 
             return Page();
         }
@@ -127,6 +132,22 @@ namespace AvaloniaUI.Homepage.Pages.Docs
 
             result.Sort((x, y) => x.Order - y.Order);
             return result;
+        }
+
+        private List<DocsIndexItem>? LoadSectionIndex(List<DocsIndexItem> index)
+        {
+            var i = index.FirstOrDefault(x => x.IsExpanded || x.IsSelected);
+
+            if (i?.IsSelected == true)
+            {
+                return i.Children;
+            }
+            else if (i?.Children is object)
+            {
+                return LoadSectionIndex(i.Children);
+            }
+
+            return null;
         }
 
         private DocsArticleFrontMatter? LoadFrontMatter(string path)

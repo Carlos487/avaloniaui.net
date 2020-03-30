@@ -26,4 +26,16 @@
     <h1>@Model.Article.Title</h1>
     @Markdown.ParseHtmlString(Model.Article.Markdown, sanitizeHtml: true)
   }
+
+  @if (Model.SectionIndex?.Count > 0)
+  {
+    <h2>In This Section</h2>
+
+    <ul>
+      @foreach (var i in Model.SectionIndex)
+      {
+        <li><a href="@i.Url">@i.Title</a></li>
+      }
+    </ul>
+  }
 </article>
