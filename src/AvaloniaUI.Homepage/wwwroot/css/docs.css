@@ -1,4 +1,4 @@
-/* Table of contents for docs and blog*/
+/* Layout for docs and blogs */
 .toc {
   display: grid;
   grid-template-rows: auto 1fr;
