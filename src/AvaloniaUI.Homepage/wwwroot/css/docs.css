@@ -23,6 +23,11 @@ ul.recent-blog-posts li a {
   text-decoration: none;
 }
 
+  ul.recent-blog-posts li.selected > a {
+    background-color: var(--green);
+    font-weight: bold;
+  }
+
 .blog-post-list {
   padding: var(--padding-large);
 }
@@ -39,11 +44,6 @@ ul.recent-blog-posts li a {
 div.meta {
   font-size: smaller;
   font-style: italic;
-}
-
-li.selected > a {
-  background-color: var(--green);
-  font-weight: bold;
 }
 
 /* On large screens display table of contents on the left */

@@ -9,7 +9,7 @@
   .tree-view li a {
     display: inline-block;
     text-decoration: none;
-    padding: 4px;    
+    padding: 4px;
   }
 
   .tree-view li .expander::before {
@@ -28,6 +28,11 @@
   .tree-view li {
     list-style-type: none;
   }
+
+    .tree-view li.selected > a.header {
+      background-color: var(--green);
+      font-weight: bold;
+    }
 
     .tree-view li:not(.expanded) ul {
       display: none;
