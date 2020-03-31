@@ -4,14 +4,13 @@ footer {
 
   footer ul {
     list-style: none;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 0;
+    margin: 0;
+    padding:0;
   }
 
   footer li {
     height: 43px;
-    padding: 17px 0 0 80px;
+    padding: 8px 0 0 70px;
   }
 
     footer li.email {
@@ -27,4 +26,11 @@ footer {
       margin: var(--padding-small) 0 0 0;
       background-image: url(/images/location.svg);
       background-repeat: no-repeat;
+    }
+
+    footer li.dotnetfoundation {
+      margin: var(--padding-small) 0 0 0;
+      background-image: url(/images/dotnetfoundation.svg);
+      background-repeat: no-repeat;
+      background-size: 42px;
     }
