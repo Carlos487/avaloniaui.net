@@ -38,6 +38,14 @@
         "slick-theme.min.css",
         "fonts/slick.woff"
       ]
+    },
+    {
+      "library": "magnific-popup.js@1.1.0",
+      "destination": "wwwroot/lib/magnific-popup.js/",
+      "files": [
+        "jquery.magnific-popup.min.js",
+        "magnific-popup.min.css"
+      ]
     }
   ]
 }

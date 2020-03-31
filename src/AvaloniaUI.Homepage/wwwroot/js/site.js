@@ -42,4 +42,7 @@ $(function () {
         dots: true,
         arrows: false
     });
+
+    // Lightbox
+    $('.lightbox').magnificPopup({ type: 'image' });
 })
