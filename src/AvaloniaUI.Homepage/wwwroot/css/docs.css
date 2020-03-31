@@ -12,6 +12,40 @@
   overflow-y: auto;
 }
 
+ul.recent-blog-posts {
+  list-style: none;
+  padding-left:0;
+}
+
+ul.recent-blog-posts li a {
+  display: inline-block;
+  padding: 4px;
+  text-decoration: none;
+}
+
+.blog-post-list {
+  padding: var(--padding-large);
+}
+
+.blog-post dl {
+  opacity: 0.5;
+}
+
+.blog-post dd {
+  margin-left: 0;
+  margin-right: 1em;
+}
+
+div.meta {
+  font-size: smaller;
+  font-style: italic;
+}
+
+li.selected > a {
+  background-color: var(--green);
+  font-weight: bold;
+}
+
 /* On large screens display table of contents on the left */
 @media (min-width: 1024px) {
   .page.docs {
@@ -22,6 +56,12 @@
   .toc {
     height: 100vh;
     padding: var(--padding-large);
+  }
+
+  .blog-post dl {
+    display: flex;
+    opacity: 0.5;
+    margin: var(--padding-small) 0;
   }
 }
 

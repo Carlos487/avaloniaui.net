@@ -8,6 +8,7 @@ using AvaloniaUI.Homepage.Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using static AvaloniaUI.Homepage.Services.PathUtilities;
 
 namespace AvaloniaUI.Homepage.Pages.Docs
 {
@@ -30,15 +31,11 @@ namespace AvaloniaUI.Homepage.Pages.Docs
         public async Task<IActionResult> OnGet(string url)
         {
             var docsPath = Path.Combine(_env.WebRootPath, DocsRelativePath);
-            var articlePath = NormalizePath(Path.Combine(docsPath, url ?? "index"));
+            var articlePath = NormalizeMarkdownPath(Path.Combine(docsPath, url ?? "index"));
 
             if (Directory.Exists(articlePath))
             {
                 articlePath = Path.Combine(articlePath, "index.md");
-            }
-            else if (!articlePath.EndsWith(".md", StringComparison.InvariantCultureIgnoreCase))
-            {
-                articlePath += ".md";
             }
 
             Article = await LoadArticle(articlePath);
@@ -78,8 +75,6 @@ namespace AvaloniaUI.Homepage.Pages.Docs
                 return null;
             }
 
-            article.Title = article.FrontMatter?.Title ?? "Untitled";
-
             return article;
         }
 
@@ -100,7 +95,7 @@ namespace AvaloniaUI.Homepage.Pages.Docs
 
                 result.Add(new DocsIndexItem
                 {
-                    Url = PhysicalPathToContentPath(filePath, false),
+                    Url = Url.PhysicalPathToContent(_env.WebRootPath, filePath, false),
                     Title = frontMatter?.Title ?? fileName,
                     Order = frontMatter?.Order ?? int.MaxValue,
                     IsSelected = filePath == selectedPath,
@@ -117,7 +112,7 @@ namespace AvaloniaUI.Homepage.Pages.Docs
                     var directoryName = Path.GetFileName(path);
                     var item = new DocsIndexItem
                     {
-                        Url = PhysicalPathToContentPath(dirPath, true),
+                        Url = Url.PhysicalPathToContent(_env.WebRootPath, dirPath, true),
                         Title = frontMatter.Title ?? directoryName,
                         Order = frontMatter.Order,
                         Children = LoadIndex(dirPath, selectedPath),
@@ -158,26 +153,6 @@ namespace AvaloniaUI.Homepage.Pages.Docs
             }
 
             return null;
-        }
-
-        private string NormalizePath(string path)
-        {
-            return path.Replace(Path.AltDirectorySeparatorChar, Path.DirectorySeparatorChar);
-        }
-
-        private string PhysicalPathToContentPath(string physicalPath, bool isDirectory)
-        {
-            var directory = Path.GetDirectoryName(physicalPath);
-            var fileName = Path.GetFileNameWithoutExtension(physicalPath);
-            var path = Path.Combine(directory ?? string.Empty, fileName);
-            var result = Path.GetRelativePath(_env.WebRootPath, path).Replace('\\', '/');
-
-            if (isDirectory && !result.EndsWith('/'))
-            {
-                result += '/';
-            }
-
-            return Url.Content("~/" + result);
         }
     }
 }

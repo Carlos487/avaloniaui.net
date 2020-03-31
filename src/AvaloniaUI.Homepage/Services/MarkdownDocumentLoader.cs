@@ -31,6 +31,8 @@ namespace AvaloniaUI.Homepage.Services
             }
 
             result.Markdown = await r.ReadToEndAsync();
+            result.Title = result.FrontMatter?.Title ?? "Untitled";
+
             return result;
 
         }

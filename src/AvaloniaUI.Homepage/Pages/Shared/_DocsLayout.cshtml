@@ -1,18 +1,16 @@
 @* Layout for docs and blogs *@
-
-
 <partial name="_Head.cshtml"/>
 
 <body>
-  <partial name="_Navbar.cshtml" model='"bg"'/>
   <div class="page docs">
+    <partial name="_Navbar.cshtml" model='"bg"' />
     <div class="toc">
       <h1 class="expander">@RenderSection("Title")</h1>
       <div class="toc-content">
         @RenderSection("TableOfContents")
       </div>
     </div>
-    @RenderBody();
+    @RenderBody()
     <partial name="_Footer.cshtml" />
   </div>
 </body>

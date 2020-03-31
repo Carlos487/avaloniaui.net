@@ -29,11 +29,6 @@
     list-style-type: none;
   }
 
-    .tree-view li.selected > a.header {
-      background-color: var(--green);
-      font-weight: bold;
-    }
-
     .tree-view li:not(.expanded) ul {
       display: none;
     }

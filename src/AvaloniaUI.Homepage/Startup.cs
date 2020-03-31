@@ -21,14 +21,6 @@ namespace AvaloniaUI.Homepage
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages().AddRazorRuntimeCompilation();
-
-            services.AddMarkdown(config =>
-            {
-                config.AddMarkdownProcessingFolder("/blog/", "~/Pages/Blog/Post.cshtml");
-            });
-
-            services.AddMvc(option => option.EnableEndpointRouting = false)
-                .AddApplicationPart(typeof(MarkdownPageProcessorMiddleware).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,17 +43,14 @@ namespace AvaloniaUI.Homepage
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
             });
 
-            app.UseMarkdown();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
             app.UseAuthorization();
-            app.UseMvcWithDefaultRoute();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
-                endpoints.MapDefaultControllerRoute();
             });
         }
     }
