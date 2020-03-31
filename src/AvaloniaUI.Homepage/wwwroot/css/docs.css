@@ -12,6 +12,10 @@
   overflow-y: auto;
 }
 
+  .toc-content .scroll-container {
+    height: 100%;
+  }
+
 ul.recent-blog-posts {
   list-style: none;
   padding-left:0;

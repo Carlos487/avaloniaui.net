@@ -24,6 +24,10 @@
       "files": [
         "anchor.min.js"
       ]
+    },
+    {
+      "library": "simplebar@5.1.0",
+      "destination": "wwwroot/lib/simplebar/"
     }
   ]
 }
