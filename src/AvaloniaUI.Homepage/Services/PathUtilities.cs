@@ -12,7 +12,14 @@ namespace AvaloniaUI.Homepage.Services
 
             if (!result.EndsWith(".md", StringComparison.InvariantCultureIgnoreCase))
             {
-                result += ".md";
+                if (File.Exists(result + ".md"))
+                {
+                    result += ".md";
+                }
+                else if (Directory.Exists(path))
+                {
+                    result = Path.Combine(result, "index.md");
+                }
             }
 
             return result;

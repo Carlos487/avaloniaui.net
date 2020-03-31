@@ -31,12 +31,7 @@ namespace AvaloniaUI.Homepage.Pages.Docs
         public async Task<IActionResult> OnGet(string url)
         {
             var docsPath = Path.Combine(_env.WebRootPath, DocsRelativePath);
-            var articlePath = NormalizeMarkdownPath(Path.Combine(docsPath, url ?? "index"));
-
-            if (Directory.Exists(articlePath))
-            {
-                articlePath = Path.Combine(articlePath, "index.md");
-            }
+            var articlePath = NormalizeMarkdownPath(Path.Combine(docsPath, url ?? string.Empty));
 
             Article = await LoadArticle(articlePath);
 
