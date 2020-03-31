@@ -63,6 +63,10 @@ li.selected > a {
     opacity: 0.5;
     margin: var(--padding-small) 0;
   }
+
+  footer {
+    grid-column: 2;
+  }
 }
 
 /* On small screens display table of contents at top, collapsing */
