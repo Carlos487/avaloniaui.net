@@ -97,6 +97,16 @@ dd.icon.category::before {
   content: '\f02e\00a0\00a0';
 }
 
+.slick-dots li button:before {
+  font-size: 16pt !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--bright-purple) !important;
+  opacity: 1 !important;
+}
+
+
 /* Reduce font size if width < 425px */
 
 @media (max-width: 425px) {

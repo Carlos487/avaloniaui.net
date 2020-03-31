@@ -36,4 +36,10 @@ $(function () {
     $('.expander').click(function () {
         $(this).parent().toggleClass('expanded');
     });
+
+    // Carousel.
+    $('.carousel').slick({
+        dots: true,
+        arrows: false
+    });
 })
