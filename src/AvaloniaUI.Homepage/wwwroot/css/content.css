@@ -62,8 +62,8 @@ article {
     margin-top: 0;
   }
 
-/* Display sidebar as a column if > 1024px */
 @media (min-width: 1024px) {
+  /* Display sidebar as a column if > 1024px */
   .sidebar-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -79,6 +79,12 @@ article {
 
   .hero-content {
     padding-top: var(--nav-height);
+  }
+
+  /* Display featured product in columns if > 1024px */
+  .featured-product {
+      display:grid;
+      grid-template-columns: 1fr 2fr;
   }
 }
 
