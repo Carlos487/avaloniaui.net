@@ -283,3 +283,7 @@ __pycache__/
 
 
 # End of https://www.gitignore.io/api/dotnetcore,aspnetcore
+
+# Bundled/minified files. Should be generated on build.
+/src/AvaloniaUI.Net/wwwroot/css/site.min.css
+/src/AvaloniaUI.Net/wwwroot/js/site.min.js
