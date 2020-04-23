@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using AvaloniaUI.Net.Models;
 using AvaloniaUI.Net.Services;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using static AvaloniaUI.Net.Services.PathUtilities;
 
 namespace AvaloniaUI.Net.Pages.Blog
 {
+    [ResponseCache(Duration = 60)]
     public class IndexModel : PageModel
     {
         private const string BlogRelativePath = "blog";

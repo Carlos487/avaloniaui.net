@@ -3,10 +3,12 @@ using System.IO;
 using AvaloniaUI.Net.Models;
 using AvaloniaUI.Net.Services;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AvaloniaUI.Net.Pages.Blog
 {
+    [ResponseCache(Duration = 60)]
     public class AllModel : PageModel
     {
         private const string BlogRelativePath = "blog";

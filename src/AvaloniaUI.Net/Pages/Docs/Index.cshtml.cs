@@ -12,6 +12,7 @@ using static AvaloniaUI.Net.Services.PathUtilities;
 
 namespace AvaloniaUI.Net.Pages.Docs
 {
+    [ResponseCache(Duration = 60)]
     public class IndexModel : PageModel
     {
         private const string DocsRelativePath = "docs";
