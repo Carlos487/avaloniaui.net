@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -52,6 +53,10 @@ namespace AvaloniaUI.Net
             {
                 endpoints.MapRazorPages();
             });
+
+            var redirect = new RewriteOptions()
+                .AddRedirect("api/(.*)", "//reference.avaloniaui.net/api/$1");
+            app.UseRewriter(redirect);
         }
     }
 }
