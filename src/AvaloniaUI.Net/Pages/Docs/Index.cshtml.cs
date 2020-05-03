@@ -28,6 +28,9 @@ namespace AvaloniaUI.Net.Pages.Docs
         public DocsArticle? Article { get; private set; }
         public List<DocsIndexItem>? Index { get; private set; }
         public List<DocsIndexItem>? SectionIndex { get; private set; }
+        
+        //Provide here the list of folders which contents will be sorted by name on the TreeView
+        private List<string> NameSortedFolders  { get; } = new List<string> {"controls"};
 
         public async Task<IActionResult> OnGet(string url)
         {
@@ -121,7 +124,17 @@ namespace AvaloniaUI.Net.Pages.Docs
                 }
             }
 
-            result.Sort((x, y) => x.Order - y.Order);
+            if (NameSortedFolders.Contains(Path.GetFileName(path)))
+            {
+                //Sorting by Name
+                result.Sort((x, y) => string.CompareOrdinal(x.Title, y.Title));
+            }
+            else
+            {
+                //Sorting by Order
+                result.Sort((x, y) => x.Order - y.Order);
+            }
+            
             return result;
         }
 
