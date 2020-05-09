@@ -1,5 +1,6 @@
 ---
 Title: Decorator
+Order: 100
 ---
 The `Decorator` is the base decorator class for decorating a single child control.
 

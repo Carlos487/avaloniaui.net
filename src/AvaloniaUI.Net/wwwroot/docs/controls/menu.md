@@ -1,5 +1,6 @@
 ---
 Title: Menu
+Order: 200
 ---
 The `Menu` control adds a top-level menu to an application. A `Menu` is usually placed in a
 `DockPanel` in a `Window`, docked to the top of the window:

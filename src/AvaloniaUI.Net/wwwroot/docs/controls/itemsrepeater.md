@@ -1,5 +1,6 @@
 ---
 Title: ItemsRepeater
+Order: 170
 ---
 A data-driven collection control that incorporates a flexible layout system, custom views, and virtualization.
 

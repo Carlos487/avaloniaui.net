@@ -1,5 +1,6 @@
 ---
 Title: Border
+Order: 10
 ---
 The `Border` control decorates a child with a border and background. It can also be used to
 display rounded corners by setting the [`CornerRadius`](/api/Avalonia.Controls/Border/60DC8BED)

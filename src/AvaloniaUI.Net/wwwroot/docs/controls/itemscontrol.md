@@ -1,5 +1,6 @@
 ---
 Title: ItemsControl
+Order: 160
 ---
 The `ItemsControl` control is the base class for controls that display multiple items like `ListBox`.
 

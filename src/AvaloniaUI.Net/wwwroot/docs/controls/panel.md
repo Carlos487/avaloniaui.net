@@ -1,5 +1,6 @@
 ---
 Title: Panel
+Order: 220
 ---
 The `Panel` is the base class for controls that can contain multiple children like `DockPanel` or `StackPanel`.
 

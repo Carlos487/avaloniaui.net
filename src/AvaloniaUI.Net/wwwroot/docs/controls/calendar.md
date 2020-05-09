@@ -1,5 +1,6 @@
 ---
 Title: Calendar
+Order: 30
 ---
 The `Calendar` control is a standard Calendar control for users to select date(s) or date ranges.
 

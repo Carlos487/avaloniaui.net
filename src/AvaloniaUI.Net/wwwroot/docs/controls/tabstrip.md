@@ -1,5 +1,6 @@
 ---
 Title: TabStrip
+Order: 320
 ---
 Displays a strip of selectable tabs.
 

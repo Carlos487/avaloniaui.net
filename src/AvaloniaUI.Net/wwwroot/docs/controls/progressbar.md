@@ -1,5 +1,6 @@
 ---
 Title: ProgressBar
+Order: 230
 ---
 The `ProgressBar` control allow for showing dynamic progress status.
 

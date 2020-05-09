@@ -1,4 +1,6 @@
+---
 Title: ComboBox
+Order: 70
 ---
 A drop-down list control.
 

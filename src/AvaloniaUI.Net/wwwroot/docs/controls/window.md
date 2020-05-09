@@ -1,5 +1,6 @@
 ---
 Title: Window
+Order: 390
 ---
 
 [`Window`](/api/Avalonia.Controls/Window) is a top-level [`ContentControl`](contentcontrol).

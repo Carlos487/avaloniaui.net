@@ -1,5 +1,6 @@
 ---
 Title: LayoutTransformControl
+Order: 180
 ---
 The `LayoutTransformControl` allows for dynamically transforming layout completely within the View class definition.
 

@@ -1,5 +1,6 @@
 ---
 Title: ContentControl
+Order: 80
 ---
 The [`ContentControl`](/api/Avalonia.Controls/ContentControl) displays data according to a
 [data template](/docs/templates/datatemplate).

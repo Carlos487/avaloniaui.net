@@ -1,5 +1,6 @@
 ---
 Title: TextBlock
+Order: 330
 ---
 The `TextBlock` control allows for the display of label-like text in the interface.
 

@@ -1,5 +1,6 @@
 ---
 Title: Expander
+Order: 120
 ---
 The `Expander` control is a control that allows for expanding to show nested content.
 

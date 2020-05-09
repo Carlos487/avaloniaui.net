@@ -1,5 +1,6 @@
 ---
 Title: Button
+Order: 20
 ---
 The `Button` control is a [`ContentControl`](contentcontrol) which reacts to pointer presses.
 

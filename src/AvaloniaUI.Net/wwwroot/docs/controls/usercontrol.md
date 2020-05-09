@@ -1,5 +1,6 @@
 ---
 Title: UserControl
+Order: 370
 ---
 
 [`UserControl`](/api/Avalonia.Controls/UserControl) control is a

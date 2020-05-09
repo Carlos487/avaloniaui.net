@@ -1,5 +1,6 @@
 ---
 Title: Separator
+Order: 280
 ---
 
 The `Separator` control is used to provide visual separators within a `Menu` control.
