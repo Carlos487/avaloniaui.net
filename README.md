@@ -1,6 +1,6 @@
 # avaloniaui.net - Avalonia UI Website
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)]
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/AvaloniaUI/Avalonia?utm_campaign=pr-badge&utm_content=badge&utm_medium=badge&utm_source=badge)
 
 Source files for the [AvaloniaUI.net](https://avaloniaui.net/) website.
 
@@ -24,11 +24,11 @@ Hit the Start Debugging button.
 
 ### .Net CLI
 
-Open a terminal in the root folder and run:
+Open a terminal into the `src\AvaloniaUI.Net` subfolder and run the following command:
 
 ```
 dotnet run
 ```
 
-This will start the website at [http://localhost:5000](http://localhost:5000) and [https://localhost:5001](https://localhost:5001)
+This will start the website at [http://localhost:5000](http://localhost:5000) and [https://localhost:5001](https://localhost:5001).
 
