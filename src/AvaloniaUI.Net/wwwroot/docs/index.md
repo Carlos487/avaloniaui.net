@@ -5,7 +5,9 @@ Order: 50
 
 Welcome to Avalonia! Avalonia is a cross platform XAML Framework for .NET Framework, .NET Core and Mono.
 
-Avalonia is shipped as .NET standard 2.0 [NuGet packages](/docs/quickstart/packages) and a [set of templates](/docs/quickstart/create-new-project) for Visual Studio and .NET core. We also have a [visual designer](/docs/quickstart/vs-designer) for Visual Studio.
+Avalonia is shipped as .NET standard 2.0 [NuGet packages](/docs/quickstart/packages) and a [set of templates](/docs/quickstart/create-new-project) for the .NET CLI.
+
+The [JetBrains Rider](https://www.jetbrains.com/rider/) IDE has inbuilt support for Avalonia XAML [starting in 2020.2](https://www.jetbrains.com/rider/whatsnew/#avalonia-support) including first-class support for Avalonia-specific XAML features and custom code inspections. We also have a [Visual Studio extension](/docs/quickstart/ide-support).
 
 This page is designed as a whirlwind tour of Avalonia. There are plenty of links throughout to more detailed documentation on each area, or you can navigate using the sections on the left.
 
