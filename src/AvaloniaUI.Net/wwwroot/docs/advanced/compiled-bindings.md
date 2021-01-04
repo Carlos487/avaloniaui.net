@@ -39,3 +39,5 @@ Setting `x:CompileBindings="True"` on the root element in a XAML file will force
   <TextBox Text="{Binding Value}"/>
 </Window>
 ```
+
+You can opt-out of compiled bindings in this case by using the `{ReflectionBinding}` markup extension.
