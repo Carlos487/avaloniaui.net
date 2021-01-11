@@ -4,7 +4,7 @@ Order: 0
 ---
 ## JetBrains Rider
 
-The [JetBrains Rider](https://www.jetbrains.com/rider/) IDE has inbuilt support for Avalonia XAML [starting in 2020.2](https://www.jetbrains.com/rider/whatsnew/#avalonia-support) including first-class support for Avalonia-specific XAML features and custom code inspections.
+The [JetBrains Rider](https://www.jetbrains.com/rider/) IDE has built-in support for Avalonia XAML [starting in 2020.3](https://www.jetbrains.com/rider/whatsnew/2020-3/#version-2020-3-avalonia-support) including first-class support for Avalonia-specific XAML features and custom code inspections.
 
 Rider uses the .NET CLI templates installed on your machine, so to get project templates follow the instructions in the [.NET CLI](#NET-CLI) section. Once the templates are installed, Rider should allow you to create Avalonia projects from its "New Solution" dialog:
 
