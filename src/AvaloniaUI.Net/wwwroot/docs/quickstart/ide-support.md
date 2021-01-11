@@ -13,7 +13,13 @@ Rider does not yet provide a visual designer, but this is in development. See [t
 
 ## Visual Studio
 
+### Avalonia Visual Studio Extension
+
 The [Avalonia for Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaforVisualStudio) includes a XAML designer which can be used to show a live preview of the XAML as you're writing it. With the Avalonia for Visual Studio extension installed, double click on an Avalonia XAML file to open it.
+
+### ReSharper for Visual Studio
+
+For Visual Studio and ReSharper users, [ReSharper 2020.3 introduces](https://www.jetbrains.com/resharper/whatsnew/2020-3/#version-2020-3-avalonia-support) built-in code analysis, code completion, navigation, and find usages.
 
 ![Visual Studio Designer](images/vs-designer.png)
 
