@@ -143,7 +143,7 @@ property/value pairs written in the format:
 <Setter Property="Padding" Value="4 2 0 4"/>
 ```
 
-You can also use long-form syntax to declare more complex objects:
+You can also use long-form syntax to declare more complex object values:
 
 ```xml
 <Setter Property="MyProperty">
@@ -176,6 +176,22 @@ to the target control's `DataContext` as there may be multiple target controls:
 
 In the above example, the binding source will be `MyObject.DataContext`, not `MyControl.DataContext`
 and if `MyObject` has no data context then the binding will not be able to produce a value.
+
+## Templates in Setters
+
+As mentioned above, usually a single insance of a setter's `Value` is created and shared across
+all matching controls. Due to this, to use a control as a setter value, the control must be wrapped
+in a `<Template>`:
+
+```xml
+<Style Selector="Border.empty">
+  <Setter Property="Child">
+    <Template>
+      <TextBlock>No content available.</TextBlock>
+    </Template>
+  </Setter>
+</Style>
+```
 
 ## Style Precedence
 
