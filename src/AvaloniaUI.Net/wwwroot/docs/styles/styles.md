@@ -159,7 +159,7 @@ Bindings can also be applied using setters and can bind to the target control's 
 
 Whenever a style is matched with a control, all of the setters will be applied to the control. 
 If a style selector causes the style to no longer match a control, the property value will revert to
-its previous value.
+the its next highest priority value.
 
 Note that the `Setter` creates a single instance of `Value` which will be applied to all controls
 that the style matches: if the object is mutable then changes will be reflected on all controls.
