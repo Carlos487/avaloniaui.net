@@ -9,6 +9,20 @@
   position: relative;
 }
 
+ul.platform-logos {
+  list-style: none;
+  float: left;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-bottom: var(--padding-large);
+  padding: 0;
+}
+
+ul.platform-logos li {
+  float: left;
+  margin: var(--padding-small) var(--padding-small) 0 0;
+}
+
   .sidebar h1 {
     font-size: 3.3rem;
     font-family: 'Montserrat Alternates', sans-serif;
