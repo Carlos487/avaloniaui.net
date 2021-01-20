@@ -71,6 +71,20 @@ article {
   outline: none;
 }
 
+.dev-tools {
+  margin-top: -70px;
+}
+
+.dev-tools div.column {
+  float: left;
+  width: 100px;
+  padding: 5px 15px;
+}
+
+.dev-tools div.column img{
+  width: 100%;
+}
+
 .selected-partners div.column {
   float: left;
   width: 33.33%;
