@@ -71,6 +71,12 @@ article {
   outline: none;
 }
 
+.selected-partners div.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
 @media (min-width: 1024px) {
   /* Display sidebar as a column if > 1024px */
   .sidebar-container {
