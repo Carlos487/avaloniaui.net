@@ -46,8 +46,12 @@ ul.selected-partners li img {
   max-height: 64px;
 }
 
+.featured-product p {
+  margin-right: 2em;
+}
+
 .featured-product img {
-  margin: 0 0 2em 2em;
+  margin-bottom: 2em;
   max-height: 580px;
 }
 
