@@ -15,6 +15,7 @@
             "wwwroot/css/content.css",
             "wwwroot/css/docs.css",
             "wwwroot/css/footer.css",
+            "wwwroot/css/index.css",
             "wwwroot/lib/**/*.css"
         ]
     },

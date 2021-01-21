@@ -37,55 +37,12 @@
   max-width: 1100px;
 }
 
-.hero-fade {
-  position: relative;
-}
-
-.hero-fade img {
-  position: absolute;
-  top: 0;
-  animation-name: fade;
-  animation-iteration-count: infinite;
-  animation-duration: 20s;
-}
-
-.hero-fade img:nth-of-type(1) {
-  animation-delay: -20s;
-}
-
-.hero-fade img:nth-of-type(2) {
-  animation-delay: -15s;
-}
-
-.hero-fade img:nth-of-type(3) {
-  animation-delay: -10s;
-}
-
-.hero-fade img:nth-of-type(4) {
-  animation-delay: -5s;
-}
-
-@-webkit-keyframes fade {
-  0% {opacity: 0;}
-  20% {opacity: 1;}
-  33% {opacity: 1;}
-  53% {opacity: 0;}
-  100% {opacity: 0;}
-}
-@keyframes fade {
-  0% {opacity: 0;}
-  20% {opacity: 1;}
-  33% {opacity: 1;}
-  53% {opacity: 0;}
-  100% {opacity: 0;}
-}
-
 /* Display hero section in 2 columns if > 1024px */
 
 @media (min-width: 1025px) {
   .hero-container {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr minmax(0, 2fr);
   }
 
   .hero-content {
