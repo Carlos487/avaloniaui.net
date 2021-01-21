@@ -47,6 +47,7 @@ ul.selected-partners li img {
 }
 
 .featured-product img {
+  margin: 0 0 2em 2em;
   max-height: 580px;
 }
 
