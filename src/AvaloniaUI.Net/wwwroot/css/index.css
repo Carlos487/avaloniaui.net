@@ -9,6 +9,10 @@ ul.platform-logos li {
   margin: var(--padding-small) var(--padding-small) 0 0;
 }
 
+ul.platform-logos li img {
+  height: 50px;
+}
+
 .homepage-hero .carousel-fade img {
   max-width: 100%;
 }
