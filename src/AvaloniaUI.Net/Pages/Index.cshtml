@@ -8,8 +8,14 @@
 @section Sidebar {
   <h1>avalonia</h1>
   <p>
-    A cross platform XAML Framework for .NET Framework, .NET Core and Mono.
+    A cross platform XAML framework for .NET
   </p>
+
+  <ul class="platform-logos">
+    <li><img src="/images/platform-logos/windows.png" alt="Windows">
+    <li><img src="/images/platform-logos/osx.png" alt="OSX">
+    <li><img src="/images/platform-logos/linux.png" alt="Linux">
+  </ul>
 
   <ul class="button-bar">
     <li><a class="button" href="/docs/quickstart">Get started</a>
@@ -18,8 +24,51 @@
 }
 
 @section HeroContent {
-  <div class="center">
-    <img class="hero-image" src="/images/heroes/homepage.svg" alt="Avalonia homepage image">
+  <div class="homepage-hero">
+    <div class="carousel-fade">
+      <div>
+        <img src="/images/heroes/windows-rider.png" alt="Avalonia in Rider on Windows">
+      </div>
+      <div>
+        <img src="/images/heroes/osx-vscode.png" alt="Avalonia in Visual Studio Code on OSX">
+      </div>
+      <div>
+        <img src="/images/heroes/windows-vs.png" alt="Avalonia in Visual Studio on Windows">
+      </div>
+      <div>
+        <img src="/images/heroes/osx-rider.png" alt="Avalonia in Rider on OSX">
+      </div>
+    </div>
+    <div class="dev-tools">
+      <p>Develop a single UI that runs everywhere using</p>
+      <ul>
+        <li>
+          <a href="https://www.jetbrains.com/rider/" title="JetBrains Rider" target="_blank" rel="noopener">
+            <img src="/images/dev-tool-logos/icon-rider.svg" alt="JetBrains Rider">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.jetbrains.com/resharper/" title="JetBrains Resharper" target="_blank" rel="noopener">
+            <img src="/images/dev-tool-logos/icon-resharper.svg" alt="JetBrains Resharper">
+          </a>
+        </li>
+        <li>
+          <a href="https://visualstudio.microsoft.com/" title="Visual Studio" target="_blank" rel="noopener">
+            <img src="/images/dev-tool-logos/visualstudio.svg" alt="Visual Studio 2019">
+          </a>
+        </li>
+        <li>
+          <a href="https://visualstudio.microsoft.com/" title="Visual Studio for Mac" target="_blank" rel="noopener">
+            <img src="/images/dev-tool-logos/vsformac.svg" alt="Visual Studio for Mac">
+          </a>
+        </li>
+        <li>
+          <a href="https://visualstudio.microsoft.com/" title="Visual Studio Code" target="_blank" rel="noopener">
+            <img src="/images/dev-tool-logos/vs-code.png" alt="Visual Studio Code">
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 }
 
@@ -36,8 +85,8 @@
   <section id="xplat" class="bg-gray2 dock-grid">
     <div class="dock-center">
       <h1 class="with-img">Cross platform <img src="/images/home/xplat.svg" alt="cross platform icon"></h1>
-      <p><strong>We support Windows, Linux and OSX with experimental mobile support for Android and full-fledged support for iOS soon.</strong>
-      <p>We use Skia for rendering in Windows via Win32, Linux via Xorg and MacOS with Cocoa.</p>
+      <p><strong>Create applications for Windows, Linux and OSX without recompiling!</strong>
+      <p>Avalonia uses a cross-platform rendering engine based on Skia with windowing backends for Win32, X11 and OSX plus experimental support for Android and iOS.</p>
     </div>
     <a class="button dock-bottom" href="/docs/quickstart">Find out more</a>
   </section>
@@ -56,7 +105,7 @@
   <h1>Getting started</h1>
   <div>
     <p>
-      See our quickstart guide for information on how to get started with Avalonia using Visual Studio and .NET
+      See our quickstart guide for information on how to get started with Avalonia using JetBrains Rider, Visual Studio or the .NET command-line.
       core.
     </p>
     <p>More IDEs and editors coming soon.</p>
@@ -80,7 +129,41 @@
   <img src="/images/home/getting-support.svg" alt="getting support">
 </section>
 
-<section id="featured-products">
+<section id="partners">
+  <h1>Selected Partners</h1>
+  <p>
+    Avalonia is proud of the work we do with many companies including:
+  </p>
+  <ul class="selected-partners">
+    <li>
+      <a href="https://www.jetbrains.com/" title="JetBrains" target="_blank" rel="noopener">
+        <img src="/images/selected-partners/jetbrains.png" alt="JetBrains">
+      </a>
+    </li>
+    <li>
+      <a href="https://www.unity.com/" title="Unity" target="_blank" rel="noopener">
+        <img src="/images/selected-partners/unity.svg" alt="Unity">
+      </a>
+    </li>
+    <li>
+      <a href="https://synergysports.com/" title="SynergySports" target="_blank" rel="noopener">
+        <img src="/images/selected-partners/synergysports.png" alt="SynergySports">
+      </a>
+    </li>
+    <li>
+      <a href="https://en.gritworld.com/" title="GritWorld" target="_blank" rel="noopener">
+        <img src="/images/selected-partners/GritWorld.png" alt="GritWorld">
+      </a>
+    </li>
+    <li>
+      <a href="https://www.getmailbird.com/" title="MailBird" target="_blank" rel="noopener">
+        <img src="/images/selected-partners/mailbird.png" alt="MailBird">
+      </a>
+    </li>
+  </ul>
+</section>
+
+<section id="featured-products" class="purple-gradient">
   <div class="carousel">
     <div>
       <div class="featured-product">
@@ -94,7 +177,7 @@
           </p>
         </div>
         <a href="~/images/featured-products/gritgene.png" class="lightbox">
-          <img src="~/images/featured-products/gritgene.svg" alt="GritGene screenshot">
+          <img src="~/images/featured-products/gritgene.png" alt="GritGene screenshot">
         </a>
       </div>
     </div>
@@ -110,7 +193,7 @@
           </p>
         </div>
         <a href="~/images/featured-products/wasabi.png" class="lightbox">
-          <img src="~/images/featured-products/wasabi.svg" alt="Wasabi screenshot">
+          <img src="~/images/featured-products/wasabi.png" alt="Wasabi screenshot">
         </a>
       </div>
     </div>
@@ -127,22 +210,7 @@
           </p>
         </div>
         <a href="~/images/featured-products/core2d.png" class="lightbox">
-          <img src="~/images/featured-products/core2d.svg" alt="Code2D screenshot">
-        </a>
-      </div>
-    </div>
-    <div>
-      <div class="featured-product">
-        <div>
-          <h1>Featured Product</h1>
-          <h2>Avalon Studio</h2>
-          <p>
-            <a href="https://github.com/VitalElement/AvalonStudio">Avalon Studio</a> is an extensible, cross platform IDE written
-            in C# for Embedded C/C++, .NET Core, Avalonia and Typescript.
-          </p>
-        </div>
-        <a href="~/images/featured-products/avalon-studio.png" class="lightbox">
-          <img src="~/images/featured-products/avalon-studio.svg" alt="Avalon Studio screenshot">
+          <img src="~/images/featured-products/core2d.png" alt="Code2D screenshot">
         </a>
       </div>
     </div>
@@ -156,14 +224,14 @@
           </p>
         </div>
         <a href="~/images/featured-products/radish.png" class="lightbox">
-          <img src="~/images/featured-products/radish.svg" alt="Radish screenshot">
+          <img src="~/images/featured-products/radish.png" alt="Radish screenshot">
         </a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="net-foundation" class="with-img-right-responsive purple-gradient">
+<section id="net-foundation" class="with-img-right-responsive">
   <h1>.NET Foundation</h1>
   <p>
     Avalonia is a <a href="https://dotnetfoundation.org">.NET Foundation project</a>. Other projects that are associated
