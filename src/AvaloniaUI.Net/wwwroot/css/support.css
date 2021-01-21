@@ -1,7 +1,7 @@
 .support-options {
   display: grid;
     justify-items: stretch;
-    margin: 4em 1em;
+    margin: 1em;
     column-gap: 2em;
     background-color: var(--gray1);
     padding: 1em;
